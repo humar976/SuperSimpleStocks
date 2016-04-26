@@ -1,0 +1,53 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="tea" class="com.jpmorgan.supersimplestocks.implementations.StockImpl">
+		<property name="stockSymbol" value="TEA"></property>
+		<property name="stockType" value="COMMON"></property>
+		<property name="lastDividend" value="8"></property>
+		<property name="fixedDividend" value="0"></property>
+		<property name="parValue" value="100"></property>
+	</bean>
+	<bean id="pop" class="com.jpmorgan.supersimplestocks.implementations.StockImpl">
+		<property name="stockSymbol" value="POP"></property>
+		<property name="stockType" value="COMMON"></property>
+		<property name="lastDividend" value="8"></property>
+		<property name="fixedDividend" value="0"></property>
+		<property name="parValue" value="100"></property>
+	</bean>
+		<bean id="ale" class="com.jpmorgan.supersimplestocks.implementations.StockImpl">
+		<property name="stockSymbol" value="ALE"></property>
+		<property name="stockType" value="COMMON"></property>
+		<property name="lastDividend" value="23"></property>
+		<property name="fixedDividend" value="0"></property>
+		<property name="parValue" value="60"></property>
+	</bean>
+	<bean id="gin" class="com.jpmorgan.supersimplestocks.implementations.StockImpl">
+		<property name="stockSymbol" value="GIN"></property>
+		<property name="stockType" value="PREFERRED"></property>
+		<property name="lastDividend" value="8"></property>
+		<property name="fixedDividend" value="0.02"></property>
+		<property name="parValue" value="100"></property>
+	</bean>
+	<bean id="joe" class="com.jpmorgan.supersimplestocks.implementations.StockImpl">
+		<property name="stockSymbol" value="JOE"></property>
+		<property name="stockType" value="COMMON"></property>
+		<property name="lastDividend" value="13"></property>
+		<property name="fixedDividend" value="0"></property>
+		<property name="parValue" value="250"></property>
+	</bean>
+	<bean id="stocksList" class="com.jpmorgan.supersimplestocks.implementations.StockListImpl">
+		<property name="stocks">
+			<map>
+				<entry key="TEA" value-ref="tea"></entry>
+				<entry key="POP" value-ref="pop"></entry>
+				<entry key="ALE" value-ref="ale"></entry>
+				<entry key="GIN" value-ref="gin"></entry>
+				<entry key="JOE" value-ref="joe"></entry>				
+			</map>
+		</property>
+	</bean>
+
+</beans>
